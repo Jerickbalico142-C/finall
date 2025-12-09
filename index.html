@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EcoGuard Forest Monitor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-container">
+
+    <!-- LOGO SECTION -->
+    <div class="header-left">
+        <img src="logo1.jpg" alt="EcoGuard Logo" class="logo">
+    </div>
+
+    <!-- CENTER TITLE SECTION -->
+    <div class="header-center">
+        <h1>EcoGuard Forest Monitor</h1>
+        <p class="subtitle">Protecting forests and biodiversity for a greener future</p>
+    </div>
+
+    <!-- RIGHT LINKS -->
+    <div class="header-right">
+	<nav>
+        <a href="contact.html">Contact Us</a>
+        <a href="position.html">Our Team</a>
+		</nav>
+    </div>
+
+</div>
+	
+<!-- Description -->
+<div class="section">
+ <center>
+    <h2>Project Description</h2>
+	 </center>
+    <p>
+        EcoGuard Forest Monitor is an interactive system that teaches users how different actions affect land ecosystems.
+        By selecting a region and performing actions such as planting trees or causing disturbances, users see real-time 
+        changes in ecosystem health displayed through a dynamic health bar and visual icons. This helps learners understand 
+        biodiversity, climate impacts, and sustainable land management in a simple and engaging way.
+    </p>
+</div>
+
+<!-- Navigation -->
+<nav>
+    <a href="temperate.html">Temperate Forest</a>
+    <a href="rainforest.html">Tropical Rainforest</a>
+    <a href="grassland.html">Grassland</a>
+    <a href="dryland.html">Dryland</a>
+    <a href="wetland.html">Wetland</a>
+</nav>
+
+<!-- Region Selector -->
+<div class="section">
+    <h2>Select a Region</h2>
+    <select id="regionSelect" onchange="switchRegion()">
+        <option value="">-- Choose a Region --</option>
+        <option value="rainforest">Tropical Rainforest</option>
+        <option value="temperate">Temperate Forest</option>
+        <option value="grassland">Grassland</option>
+        <option value="wetland">Wetland</option>
+        <option value="dryland">Dryland</option>
+    </select>
+</div>
+
+<!-- Health Bar -->
+<div class="section">
+    <h2>Ecosystem Health</h2>
+    <div id="healthBarContainer"><div id="healthBar"></div></div>
+    <p id="healthValue">Health: 0</p>
+</div>
+
+<!-- Actions -->
+<div class="section">
+    <h2>Actions</h2>
+    <div class="button-container">
+        <button onclick="applyAction('tree')">🌳 Plant Tree (+5)</button>
+        <button onclick="applyAction('pollinators')">🐝 Add Pollinators (+3)</button>
+        <button onclick="applyAction('wildfire')">🔥 Wildfire (-10)</button>
+        <button onclick="applyAction('farmland')">🚜 Expand Farmland (-6)</button>
+        <button onclick="applyAction('urban')">🏙️ Urban Development (-8)</button>
+        <button onclick="applyAction('invasive')">🚫 Remove Invasive Species (+4)</button>
+    </div>
+</div>
+
+<!-- Visualizer -->
+<div class="section">
+    <h2>Ecosystem Visualizer</h2>
+    <div id="visualizer"></div>
+</div>
+
+<!-- Summary -->
+<div class="section">
+    <h2>Environmental Summary</h2>
+    <p id="summaryText">Select a region to begin.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 EcoGuard Forest Monitor. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
